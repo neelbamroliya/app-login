@@ -5,7 +5,7 @@ import { useFormik } from 'formik'
 
 import styles from "../styles/Username.module.css"
 import avatar from "../assets/profile.png"
-import { usernameValidate } from '../helper/validate'
+import { passwordValidate } from '../helper/validate'
 
 const Password = () => {
 
@@ -13,7 +13,7 @@ const Password = () => {
     initialValues: {
       password: ''
     },
-    validate: usernameValidate,
+    validate: passwordValidate,
     validateOnBlur: false,
     validateOnChange: false,
     onSubmit: async values => {
@@ -38,11 +38,11 @@ const Password = () => {
             </div>
             <div className="textbox flex flex-col items-center gap-6">
               <input {...formik.getFieldProps('password')} className={styles.textbox} type="password" placeholder='Password' />
-              <button className={styles.btn} type="submit">Lets go..!!</button>
+              <button className={styles.btn} type="submit">Sign In</button>
             </div>
 
             <div className="text-center py-4">
-              <span className='text-gray-500'>Not a Member <Link className='text-red-500' to="/register">Regitser Now</Link></span>
+              <span className='text-gray-500'>Forgot Password?<Link className='text-red-500' to="/recovery"> Recover Now</Link></span>
             </div>
           </form>
         </div>
