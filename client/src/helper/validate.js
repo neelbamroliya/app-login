@@ -49,6 +49,11 @@ export const usernameValidate = async values => {
 }
 
 
+//validate profile page
+export const profileValidation = async (values) => {
+  const errors = emailVerify({}, values)
+  return errors;
+}
 
 
 //validate password
